@@ -409,12 +409,6 @@ Created by Harish</description>
 <packages>
 </packages>
 <symbols>
-<symbol name="+5V" urn="urn:adsk.eagle:symbol:26929/1" library_version="1">
-<wire x1="1.27" y1="-1.905" x2="0" y2="0" width="0.254" layer="94"/>
-<wire x1="0" y1="0" x2="-1.27" y2="-1.905" width="0.254" layer="94"/>
-<text x="-2.54" y="-5.08" size="1.778" layer="96" rot="R90">&gt;VALUE</text>
-<pin name="+5V" x="0" y="-2.54" visible="off" length="short" direction="sup" rot="R90"/>
-</symbol>
 <symbol name="+3V3" urn="urn:adsk.eagle:symbol:26950/1" library_version="1">
 <wire x1="1.27" y1="-1.905" x2="0" y2="0" width="0.254" layer="94"/>
 <wire x1="0" y1="0" x2="-1.27" y2="-1.905" width="0.254" layer="94"/>
@@ -434,19 +428,6 @@ Created by Harish</description>
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="+5V" urn="urn:adsk.eagle:component:26963/1" prefix="P+" library_version="1">
-<description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
-<gates>
-<gate name="1" symbol="+5V" x="0" y="0"/>
-</gates>
-<devices>
-<device name="">
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
 <deviceset name="+3V3" urn="urn:adsk.eagle:component:26981/1" prefix="+3V3" library_version="1">
 <description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
 <gates>
@@ -7407,9 +7388,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </class>
 </classes>
 <parts>
-<part name="NODE1" library="nodemcu_esp8266" deviceset="NODEMCU_ESP8266" device=""/>
-<part name="P+1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
-<part name="+3V1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
 <part name="IC1" library="micro-philips" deviceset="PCF8574" device="T"/>
 <part name="R2" library="adafruit" deviceset="R-US_" device="R0805" value="100"/>
 <part name="TM1" library="adafruit" deviceset="TRIM" device="" value="1K"/>
@@ -7461,34 +7439,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="GND11" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 </parts>
 <sheets>
-<sheet>
-<plain>
-</plain>
-<instances>
-<instance part="NODE1" gate="G$1" x="63.5" y="60.96" smashed="yes">
-<attribute name="VALUE" x="53.34" y="33.02" size="1.27" layer="96"/>
-<attribute name="NAME" x="53.34" y="78.74" size="1.27" layer="95"/>
-</instance>
-<instance part="P+1" gate="1" x="88.9" y="83.82" smashed="yes">
-<attribute name="VALUE" x="86.36" y="78.74" size="1.778" layer="96" rot="R90"/>
-</instance>
-<instance part="+3V1" gate="G$1" x="35.56" y="81.28" smashed="yes">
-<attribute name="VALUE" x="33.02" y="76.2" size="1.778" layer="96" rot="R90"/>
-</instance>
-</instances>
-<busses>
-</busses>
-<nets>
-<net name="+3V3" class="0">
-<segment>
-<pinref part="+3V1" gate="G$1" pin="+3V3"/>
-<pinref part="NODE1" gate="G$1" pin="3V3@1"/>
-<wire x1="35.56" y1="78.74" x2="35.56" y2="73.66" width="0.1524" layer="91"/>
-<wire x1="35.56" y1="73.66" x2="48.26" y2="73.66" width="0.1524" layer="91"/>
-</segment>
-</net>
-</nets>
-</sheet>
 <sheet>
 <plain>
 </plain>
